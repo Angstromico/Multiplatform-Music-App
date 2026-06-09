@@ -6,6 +6,8 @@ A new Flutter project.
 
 ```text
 lib/
+├── core/
+│   └── theme/
 ├── features/
 │   ├── auth/
 │   │   ├── model/

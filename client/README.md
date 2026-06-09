@@ -2,6 +2,25 @@
 
 A new Flutter project.
 
+## Folder Structure
+
+```text
+lib/
+├── features/
+│   ├── auth/
+│   │   ├── model/
+│   │   └── view/
+│   │       ├── pages/
+│   │       └── widgets/
+│   └── home/
+│       ├── model/
+│       └── view/
+│           ├── pages/
+│           └── widgets/
+├── viewmodel/
+└── main.dart
+```
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

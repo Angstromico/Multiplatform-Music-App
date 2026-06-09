@@ -14,7 +14,7 @@ class _SignupPageState extends State<SignupPage> {
       appBar: AppBar(),
       body: Column(
         children: const [
-          Text('Signup Page', style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),),
+          Text('Signup', style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),),
         ],
       ),
     );

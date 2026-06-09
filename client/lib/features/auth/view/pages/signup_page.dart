@@ -11,8 +11,11 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Signup'),
+      appBar: AppBar(),
+      body: Column(
+        children: const [
+          Text('Signup Page', style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),),
+        ],
       ),
     );
   }

@@ -13,13 +13,23 @@ class _SignupPageState extends State<SignupPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(
-        children: const [
-          Text('Sign Up', style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),),
-          CustomField(labelText: 'Username'),
-          CustomField(labelText: 'Email'),
-          CustomField(labelText: 'Password'),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Text(
+              'Sign Up',
+              style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 30),
+            CustomField(labelText: 'Name'),
+            SizedBox(height: 15),
+            CustomField(labelText: 'Email'),
+            SizedBox(height: 15),
+            CustomField(labelText: 'Password', isObscureText: true),
+          ],
+        ),
       ),
     );
   }

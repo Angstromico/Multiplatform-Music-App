@@ -35,19 +35,32 @@ class _SignupPageState extends State<SignupPage> {
               const SizedBox(height: 20),
               AuthGradientButton(buttonText: 'Sign Up', onTap: () {}),
               const SizedBox(height: 20),
-              RichText(text:  const TextSpan(children: [
-                TextSpan(
-                    text: 'Already have an account? ',
-                    style: TextStyle(fontSize: 16)),
-                TextSpan(
-                  text: 'Login',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Pallete.gradient1,
+              RichText(
+                text: TextSpan(
+                  text: 'Already have an account? ',
+                  style: Theme.of(context).textTheme.titleMedium,
+                  children: [
+                    WidgetSpan(
+                      child: ShaderMask(
+                        shaderCallback: (bounds) {
+                          return const LinearGradient(
+                            colors: [Pallete.gradient1, Pallete.gradient2],
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                          ).createShader(bounds);
+                        },
+                        child: Text(
+                          'Login',
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                        ),
                       ),
-                )
-              ])),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/custom_field.dart';
+import '../widgets/auth_gradient_button.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
@@ -18,19 +19,20 @@ class _SignupPageState extends State<SignupPage> {
           padding: const EdgeInsets.all(15.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              SizedBox(height: 100),
-              Text(
+            children: [
+              const SizedBox(height: 100),
+              const Text(
                 'Sign Up',
                 style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 30),
-              CustomField(labelText: 'Name'),
-              SizedBox(height: 15),
-              CustomField(labelText: 'Email'),
-              SizedBox(height: 15),
-              CustomField(labelText: 'Password', isObscureText: true),
-              SizedBox(height: 20),
+              const SizedBox(height: 30),
+              const CustomField(labelText: 'Name'),
+              const SizedBox(height: 15),
+              const CustomField(labelText: 'Email'),
+              const SizedBox(height: 15),
+              const CustomField(labelText: 'Password', isObscureText: true),
+              const SizedBox(height: 20),
+              AuthGradientButton(buttonText: 'Sign Up', onTap: () {}),
             ],
           ),
         ),

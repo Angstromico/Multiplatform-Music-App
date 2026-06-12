@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/custom_field.dart';
 import '../widgets/auth_gradient_button.dart';
+import 'package:client/core/theme/app_pallete.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
@@ -33,6 +34,20 @@ class _SignupPageState extends State<SignupPage> {
               const CustomField(labelText: 'Password', isObscureText: true),
               const SizedBox(height: 20),
               AuthGradientButton(buttonText: 'Sign Up', onTap: () {}),
+              const SizedBox(height: 20),
+              RichText(text:  const TextSpan(children: [
+                TextSpan(
+                    text: 'Already have an account? ',
+                    style: TextStyle(fontSize: 16)),
+                TextSpan(
+                  text: 'Login',
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Pallete.gradient1,
+                      ),
+                )
+              ])),
             ],
           ),
         ),
